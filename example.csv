@@ -1,0 +1,37 @@
+# Lines starting with a # are ignored by the program. No space prior to the = mark for config, i.e. setCeiling=8 not setCeiling = 8
+setCeiling=8
+# Globally set Ceiling to adjust values more easily; it lets you use a value of '10' for all spikes if wanted and then do a global adjust without having to do a find-replace.
+# Can also do more detailed adjustments but in general, avoid turning vibes all the way off or setting them to max
+# default Ceiling is 8
+setFloor=2
+# Globally set floor for baseline vibes.
+# default Floor is 2
+# To-Do: Implement baseline patterns instead of just a flat vibe.
+setDefStrength=10
+# Sets the default spike strength to 10
+setDefLength=20
+# Sets the default spike length to 20 ds or 2s. Right now spike length is duplicated on each side of the spike, i.e. a 2s ramp up and a 2s ramp down, assuming no other spikes are within the targeted zone
+setMinTime=50
+# If the total pattern length is less than this (in ds) it will extend it to at least that long
+# default Min Time is 50ds or 5s
+
+&&&&TIME START&&&&
+# Format is time (in ds or tenths of seconds), optional spike strength (default 10), optional spike length (default 20 ds or 2s). Spaces can be inserted between , or not, stripped out by the program.
+# Times do also not need to be sequential, it gets parsed properly by the program regardless.
+# ex:
+# 192, 7, 17
+# At 19.2s, spike at strength 7 for 1.7s
+# Separate values with commas. Optional values can be excluded and on need to include extra commas if not required.
+# ex:
+# 121,5,
+# At 12.1s, spike at strength 5 for 2.0s (default)
+# ex:
+# 2001,,30
+# At 200.1s, spike at strength 10 (default) for 3.0s
+#
+# Delete the timestamps below and just write in your own, then run the application from the command prompt or a batch file.
+# The format is hapticmaker.exe nameofconfigfile.csv
+192, 7, 17
+121, 5
+121,5
+2001,,30
