@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>hapticmaker</RootNamespace>
+    <Authors>cutie programmer</Authors>
+    <Product />
+    <PackageId>Haptic Maker</PackageId>
+    <AssemblyName>hapticmaker</AssemblyName>
+    <ApplicationIcon />
+    <StartupObject />
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  
+
+</Project>
